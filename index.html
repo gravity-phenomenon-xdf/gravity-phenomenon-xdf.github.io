@@ -158,12 +158,6 @@
                 generateStar(){
                     var geometry = new THREE.SphereGeometry( this.params[1], 32, 32 );
                     this.obj = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial({color: new THREE.Color(this.params[2]), emissive:new THREE.Color(this.params[2])})); 
-                    this.point_light = new THREE.PointLight( new THREE.Color(this.params[2]), 1.4, 10050 );
-                    this.point_light.position.set(this.coord[0], this.coord[1], this.coord[2]);
-                    const pointLightHelper = new THREE.PointLightHelper( this.point_light, this.params[1]-2 );
-                    scene.add( pointLightHelper );
-                    
-                    scene.add(this.point_light)
                     scene.add(this.obj);   
                 }
                 
