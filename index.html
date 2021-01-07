@@ -306,6 +306,7 @@
             
             dx=5
             function render() {
+                
 	            requestAnimationFrame(render);
                 if(setting.start || additional_fl){
                     time+=1
@@ -360,8 +361,8 @@
                 confirm(objs)
                 
                 
-                
-	           renderer.render(scene, camera);
+                setTimeout(function(){
+	           renderer.render(scene, camera)}, 2)
             }
             render()
 		</script>
