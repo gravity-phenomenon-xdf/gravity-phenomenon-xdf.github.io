@@ -308,6 +308,7 @@
             function render() {
                 
 	            requestAnimationFrame(render);
+                setTimeout(function(){
                 if(setting.start || additional_fl){
                     time+=1
                     if(time==STOP_TIME){
@@ -357,12 +358,12 @@
                         objs[i].line = new THREE.Line( geometry, materialLine );
                         scene.add(objs[i].line);
                     }
-                }
+                }}, 100)
+                           
                 confirm(objs)
                 
                 
-                setTimeout(function(){
-	           renderer.render(scene, camera)}, 100)
+	           renderer.render(scene, camera)
             }
             render()
 		</script>
