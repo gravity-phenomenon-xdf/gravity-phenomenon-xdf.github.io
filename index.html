@@ -157,7 +157,7 @@
                 }
                 generateStar(){
                     var geometry = new THREE.SphereGeometry( this.params[1], 32, 32 );
-                    this.obj = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial({color: new THREE.Color(this.params[2]), emissive:new THREE.Color(this.params[2])})); 
+                    this.obj = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial({emissive:new THREE.Color(this.params[2])})); 
                     scene.add(this.obj);   
                 }
                 
