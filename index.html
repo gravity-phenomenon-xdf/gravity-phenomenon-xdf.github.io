@@ -302,7 +302,7 @@
             function render() {
                 
 	            requestAnimationFrame(render);
-                setTimeout(function(){
+                
                 if(setting.start || additional_fl){
                     time+=1
                     if(time==STOP_TIME){
@@ -355,7 +355,7 @@
                 }
                            
                 confirm(objs)
-                }, 100)
+                
                 
 	           renderer.render(scene, camera)
             }
